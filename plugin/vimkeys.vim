@@ -51,10 +51,6 @@ nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
 
 " General mapping correction
-noremap! [ {
-noremap! { [
-noremap! ] }
-noremap! } ]
 
 noremap! 1 !
 noremap! 2 @
@@ -80,18 +76,56 @@ noremap! ( 9
 noremap! ) 0
 noremap! _ -
 
-noremap it i(
-noremap at a(
+" Paren
 noremap 9 [(
 noremap 0 ])
 
-noremap ib i{
-noremap ab a{
+noremap i9 i(
+noremap a9 a(
+
+noremap t9 t(
+noremap t0 t)
+noremap T9 T(
+noremap T0 T)
+noremap f9 f(
+noremap f0 f)
+noremap F9 F(
+noremap F0 F)
+
+" Curly
+noremap! [ {
+noremap! ] }
+
+noremap i[ i{
+noremap a[ a{
+
+noremap t[ t{
+noremap t] t}
+noremap T[ T{
+noremap T] T}
+noremap f[ f{
+noremap f] f}
+noremap F[ F{
+noremap F] F}
+
 noremap [ [{
 noremap ] ]}
 
-noremap iv i[
-noremap av a[
+" Square
+noremap! { [
+noremap! } ]
+
+noremap i{ i[
+noremap a{ a[
+
+noremap t{ t[
+noremap t} t]
+noremap T{ T[
+noremap T} T]
+noremap f{ f[
+noremap f} f]
+noremap F{ F[
+noremap F} F]
 
 " Key mapping correction for python files
 au FileType python inoremap <buffer> ; :
