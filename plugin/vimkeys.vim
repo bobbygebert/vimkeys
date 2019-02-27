@@ -3,8 +3,10 @@ inoremap II <ESC>I
 inoremap AA <ESC>A
 
 " Normal navigation
-nnoremap <silent> < :let @s=@/<CR>:set hls!<CR>?^\h.*(<CR>:let @/=@s<CR>:set hls!<CR>
-nnoremap <silent> > :let @s=@/<CR>:set hls!<CR>/^\h.*(<CR>:let @/=@s<CR>:set hls!<CR>
+"nnoremap <silent> < :let @s=@/<CR>:set hls!<CR>?^\h.*(<CR>:let @/=@s<CR>:set hls!<CR>
+"nnoremap <silent> > :let @s=@/<CR>:set hls!<CR>/^\h.*(<CR>:let @/=@s<CR>:set hls!<CR>
+nnoremap < [[
+nnoremap > ]]
 
 " <CR> -> :
 vnoremap <CR> :
