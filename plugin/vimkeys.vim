@@ -52,6 +52,30 @@ nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
 
 " General mapping correction
 
+noremap 1 !
+noremap 2 @
+noremap 3 #
+noremap 4 $
+noremap 5 %
+noremap 6 ^
+noremap 7 &
+noremap 8 *
+noremap 9 (
+noremap 0 )
+noremap - _
+
+noremap ! 1
+noremap @ 2
+noremap # 3
+noremap $ 4
+noremap % 5
+noremap ^ 6
+noremap & 7
+noremap * 8
+noremap ( 9
+noremap ) 0
+noremap _ -
+
 noremap! 1 !
 noremap! 2 @
 noremap! 3 #
@@ -135,6 +159,18 @@ au FileType c noremap! <buffer> ' "
 au FileType c noremap! <buffer> " '
 au FileType c noremap <buffer> ' "
 au FileType c noremap <buffer> " '
+au FileType c noremap i' i"
+au FileType c noremap i" i'
+au FileType c noremap a' a"
+au FileType c noremap a" a'
+au FileType c noremap t' t"
+au FileType c noremap t" t'
+au FileType c noremap T' T"
+au FileType c noremap T" T'
+au FileType c noremap f' f"
+au FileType c noremap f" f'
+au FileType c noremap F' F"
+au FileType c noremap F" F'
 au FileType c noremap! <buffer> <BSLASH> <BAR>
 au FileType c noremap! <buffer> <BAR> <BSLASH>
 au FileType c noremap! <buffer> ` ->
