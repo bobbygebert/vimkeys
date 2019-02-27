@@ -27,10 +27,10 @@ nnoremap \ 2<C-]>
 nmap KK :q <CR>
 
 " Quick fix
+nmap <C-c><C-c><C-l> :ccl<CR>:lcl<CR>
+
 nmap <C-c><C-c><C-f> :cfile build/log <CR>
 nmap <C-c><C-c><C-o> :cope <CR>
-nmap <C-c><C-c><C-l> :ccl <CR>
-nmap <C-c><C-c><C-l> :ccl <CR>
 nmap <C-c><C-c><C-c> :cc <CR>
 nmap <C-c><C-n> :cn <CR>
 nmap <C-c><C-p> :cp <CR>
