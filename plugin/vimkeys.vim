@@ -17,10 +17,6 @@ augroup enter_fix
     au CmdWinEnter * nnoremap <buffer> <CR> <CR>
 augroup END
 
-" Leader
-let mapleader = ','
-nnoremap " ,
-
 " Search
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 
@@ -39,6 +35,7 @@ nmap <C-c><C-c><C-c> :cc <CR>
 nmap <C-c><C-n> :cn <CR>
 nmap <C-c><C-p> :cp <CR>
 
+nmap <C-c><C-l><C-o> :lope <CR>
 nmap <C-c><C-l><C-l> :ll <CR>
 nmap <C-c><C-l><C-n> :lnext <CR>
 nmap <C-c><C-l><C-p> :lp <CR>
