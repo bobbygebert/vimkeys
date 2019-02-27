@@ -8,6 +8,9 @@ inoremap AA <ESC>A
 nnoremap < [[
 nnoremap > ]]
 
+noremap <C-l> <ESC>
+noremap! <C-l> <ESC>
+
 " <CR> -> :
 vnoremap <CR> :
 nnoremap <CR> :
