@@ -151,6 +151,19 @@ noremap f} f]
 noremap F{ F[
 noremap F} F]
 
+" Underscore
+noremap! - _
+noremap! _ -
+
+noremap t- t_
+noremap t_ t-
+noremap T- T_
+noremap T_ T-
+noremap f- f_
+noremap f_ f-
+noremap F- F_
+noremap F_ F-
+
 " Key mapping correction for python files
 au FileType python inoremap <buffer> ; :
 
