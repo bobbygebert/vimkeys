@@ -5,16 +5,6 @@ inoremap AA <ESC>A
 " Normal navigation
 nmap <silent> < :let @s=@/<CR>:set hls!<CR>?^\h.*(<CR>:let @/=@s<CR>:set hls!<CR>
 nmap <silent> > :let @s=@/<CR>:set hls!<CR>/^\h.*(<CR>:let @/=@s<CR>:set hls!<CR>
-nmap ( [(
-nmap ) ])
-nmap [[ [{
-nmap ]] ]}
-
-" Visual navigation
-vmap ( [(
-vmap ) ])
-vmap [[ [{
-vmap ]] ]}
 
 " <CR> -> :
 vnoremap <CR> :
@@ -33,8 +23,7 @@ nnoremap " ,
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 
 " ctags
-nnoremap <Bar> 2<C-]>
-nmap \ :PreviewTag<CR>
+nnoremap \ 2<C-]>
 
 " Buffer commands
 nmap KK :q <CR>
@@ -61,6 +50,57 @@ map <C-l> <C-W>l
 nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
 
-" Key mapping correction for python profile
-"nmap ; :
-"vmap ; :
+" General mapping correction
+noremap! [ {
+noremap! { [
+noremap! ] }
+noremap! } ]
+
+noremap! 1 !
+noremap! 2 @
+noremap! 3 #
+noremap! 4 $
+noremap! 5 %
+noremap! 6 ^
+noremap! 7 &
+noremap! 8 *
+noremap! 9 (
+noremap! 0 )
+noremap! - _
+
+noremap! ! 1
+noremap! @ 2
+noremap! # 3
+noremap! $ 4
+noremap! % 5
+noremap! ^ 6
+noremap! & 7
+noremap! * 8
+noremap! ( 9
+noremap! ) 0
+noremap! _ -
+
+noremap it i(
+noremap at a(
+noremap 9 [(
+noremap 0 ])
+
+noremap ib i{
+noremap ab a{
+noremap [ [{
+noremap ] ]}
+
+noremap iv i[
+noremap av a[
+
+" Key mapping correction for python files
+au FileType python inoremap <buffer> ; :
+
+" Key mapping correction for c files
+au FileType c noremap! <buffer> ' "
+au FileType c noremap! <buffer> " '
+au FileType c noremap <buffer> ' "
+au FileType c noremap <buffer> " '
+au FileType c noremap! <buffer> <BSLASH> <BAR>
+au FileType c noremap! <buffer> <BAR> <BSLASH>
+au FileType c noremap! <buffer> ` ->
