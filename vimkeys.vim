@@ -1,0 +1,106 @@
+" Insert mode navigation
+inoremap II <ESC>I
+inoremap AA <ESC>A
+
+" Normal navigation
+nmap <silent> < :let @s=@/<CR>:set hls!<CR>?^\h.*(<CR>:let @/=@s<CR>:set hls!<CR>
+nmap <silent> > :let @s=@/<CR>:set hls!<CR>/^\h.*(<CR>:let @/=@s<CR>:set hls!<CR>
+
+" <CR> -> :
+vnoremap <CR> :
+nnoremap <CR> :
+augroup enter_fix
+    au!
+    au BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+    au CmdWinEnter * nnoremap <buffer> <CR> <CR>
+augroup END
+
+" Leader
+let mapleader = ','
+nnoremap " ,
+
+" Search
+nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+
+" ctags
+nnoremap \ 2<C-]>
+
+" Buffer commands
+nmap KK :q <CR>
+
+" Quick fix
+nmap <C-c><C-c><C-f> :cfile build/log <CR>
+nmap <C-c><C-c><C-o> :cope <CR>
+nmap <C-c><C-c><C-l> :ccl <CR>
+nmap <C-c><C-c><C-l> :ccl <CR>
+nmap <C-c><C-c><C-c> :cc <CR>
+nmap <C-c><C-n> :cn <CR>
+nmap <C-c><C-p> :cp <CR>
+
+nmap <C-c><C-l><C-l> :ll <CR>
+nmap <C-c><C-l><C-n> :lnext <CR>
+nmap <C-c><C-l><C-p> :lp <CR>
+
+" Pane navigation
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
+
+" General mapping correction
+noremap! [ {
+noremap! { [
+noremap! ] }
+noremap! } ]
+
+noremap! 1 !
+noremap! 2 @
+noremap! 3 #
+noremap! 4 $
+noremap! 5 %
+noremap! 6 ^
+noremap! 7 &
+noremap! 8 *
+noremap! 9 (
+noremap! 0 )
+noremap! - _
+
+noremap! ! 1
+noremap! @ 2
+noremap! # 3
+noremap! $ 4
+noremap! % 5
+noremap! ^ 6
+noremap! & 7
+noremap! * 8
+noremap! ( 9
+noremap! ) 0
+noremap! _ -
+
+noremap it i(
+noremap at a(
+noremap 9 [(
+noremap 0 ])
+
+noremap ib i{
+noremap ab a{
+noremap [ [{
+noremap ] ]}
+
+noremap iv i[
+noremap av a[
+
+" Key mapping correction for python files
+au FileType python inoremap <buffer> ; :
+
+" Key mapping correction for c files
+au FileType c noremap! <buffer> ' "
+au FileType c noremap! <buffer> " '
+au FileType c noremap <buffer> ' "
+au FileType c noremap <buffer> " '
+au FileType c noremap! <buffer> <BSLASH> <BAR>
+au FileType c noremap! <buffer> <BAR> <BSLASH>
+au FileType c noremap! <buffer> ` ->
