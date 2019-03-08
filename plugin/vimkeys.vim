@@ -50,7 +50,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
-nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
+nnoremap <silent> _ :exe "resize " . (winheight(0) * 2/3)<CR>
 
 " General mapping correction
 
@@ -76,7 +76,6 @@ noremap & 7
 noremap * 8
 noremap ( 9
 noremap ) 0
-noremap _ -
 
 noremap! 1 !
 noremap! 2 @
